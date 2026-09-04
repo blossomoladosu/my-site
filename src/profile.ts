@@ -35,7 +35,7 @@ export const profile = {
 
   /** One decision you're proud of, in a sentence. */
   decisionImProudOf:
-    "I decided to become an RA because it allows me to help students and make their day-to-day life a bit easier!",
+    "I am proud of my decision to run for the Executive Board of my fraternity, Phi Sigma Pi, becoming the Treasuer.",
 
   /**
    * Your photo. Replace public/photo.svg with a real photo of you
