@@ -9,20 +9,28 @@ export const metadata = { title: `About — ${profile.displayName}` };
  */
 export default function AboutPage() {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-14">
-      <div className="flex flex-col gap-10 sm:flex-row">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={profile.photoPath}
-          alt={profile.displayName}
-          className="h-56 w-56 shrink-0 rounded-2xl border border-line object-cover"
-        />
-        <div>
-          <h1 className="text-4xl font-bold">{profile.displayName}</h1>
-          <p className="mt-2 text-lg text-muted">
-            From <span className="font-semibold text-ink">{profile.hometown}</span>
-          </p>
-          <p className="mt-5 max-w-prose">{profile.bio}</p>
+    <main className="mx-auto max-w-3xl px-6 py-16 sm:py-20">
+      <div
+        className="-mx-6 mb-12 px-6 py-10 sm:-mx-0 sm:rounded-2xl sm:px-8"
+        style={{
+          background:
+            "linear-gradient(180deg, color-mix(in srgb, var(--accent) 16%, var(--paper)) 0%, var(--paper) 100%)",
+        }}
+      >
+        <div className="flex flex-col gap-10 sm:flex-row">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={profile.photoPath}
+            alt={profile.displayName}
+            className="h-56 w-56 shrink-0 rounded-2xl border border-line object-cover object-[center_18%] shadow-sm"
+          />
+          <div>
+            <h1 className="text-4xl font-bold">{profile.displayName}</h1>
+            <p className="mt-2 text-lg text-muted">
+              From <span className="font-semibold text-ink">{profile.hometown}</span>
+            </p>
+            <p className="mt-5 max-w-prose">{profile.bio}</p>
+          </div>
         </div>
       </div>
 

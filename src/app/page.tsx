@@ -37,24 +37,37 @@ const SERVICES = [
 
 export default function HomePage() {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-14">
+    <main className="mx-auto max-w-3xl px-6 py-20 sm:py-28">
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-        {profile.tagline}
-      </p>
-      <h1 className="mt-3 text-5xl font-bold">{profile.displayName}</h1>
-      <p className="mt-5 max-w-prose text-lg text-muted">{profile.bio}</p>
+      <div className="flex flex-col-reverse items-start gap-10 sm:flex-row sm:items-end sm:justify-between">
+        <div className="max-w-prose">
+          <p className="text-xl font-semibold leading-snug text-accent sm:text-2xl">
+            {profile.tagline}
+          </p>
+          <h1 className="mt-4 text-5xl font-bold sm:text-6xl">{profile.displayName}</h1>
+          <p className="mt-6 text-lg text-muted">{profile.bio}</p>
+        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={profile.photoPath}
+          alt={profile.displayName}
+          className="h-40 w-40 shrink-0 rounded-2xl border border-line object-cover object-[center_20%] shadow-sm sm:h-48 sm:w-48"
+        />
+      </div>
 
       {/* ── Portfolio of decision services ───────────────────────────── */}
-      <section className="mt-14">
+      <section className="mt-20">
         <h2 className="text-2xl font-bold">A portfolio of decision services</h2>
-        <p className="mt-2 max-w-prose text-muted">
+        <p className="mt-3 max-w-prose text-muted">
           Over the semester this site grows one live decision service per lane. Here&apos;s
           what&apos;s coming:
         </p>
-        <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+        <ul className="mt-8 grid gap-4 sm:grid-cols-2">
           {SERVICES.map((s) => (
-            <li key={s.lane} className="rounded-xl border border-line bg-surface p-5">
+            <li
+              key={s.lane}
+              className="rounded-xl border border-line bg-surface p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md"
+            >
               <p className="text-xs font-semibold uppercase tracking-widest text-muted">
                 Lane {s.lane}
               </p>
@@ -70,7 +83,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Guestbook: the live database round-trip ──────────────────── */}
-      <section className="mt-14">
+      <section className="mt-20">
         <h2 className="text-2xl font-bold">Guestbook</h2>
         <p className="mt-2 max-w-prose text-muted">
           Signed entries live in my own database: proof this site does a real round-trip.
