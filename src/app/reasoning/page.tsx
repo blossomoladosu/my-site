@@ -59,7 +59,7 @@ export default async function ReasoningPage() {
               )}
             </p>
             <p className="mt-2 max-w-prose text-sm text-muted">
-              How I decided: I ignore how convincing the story sounds and only look at the
+              I ignore how convincing the story sounds and only look at the
               shape of the argument. If the rule says A leads to B, then seeing A proves B,
               and seeing not-B proves not-A. Seeing B or not-A alone does not prove the other
               side. That is where people often jump to a conclusion that the logic does not
@@ -91,7 +91,7 @@ export default async function ReasoningPage() {
               </strong>
             </p>
             <p className="mt-2 max-w-prose text-sm text-muted">
-              In plain terms: after a case gets flagged, this number is the chance it is
+              After a case gets flagged, this number is the chance it is
               actually a true positive, once you take the base rate into account.
             </p>
           </div>
